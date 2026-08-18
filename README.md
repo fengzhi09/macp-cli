@@ -8,6 +8,8 @@
 
 ## 是什么
 
+![macp-cli 架构图](http://120.48.37.218:11000/img/macp-arch.png)
+
 ```
 手机 App ──扫码──► 本机 macp daemon ──MQTT 隧道──► macp 服务端（归因引擎）
                         │
@@ -21,6 +23,10 @@
 - **插件生态**：参照 DeepSeek Harness「一切皆插件」——命令、agent、工具、事件全是插件，用户插件放 `~/.macp/plugins/` 即可
 - **隧道直连**：SSH 管道经 MQTT 到本机/远端主机 daemon，大文件同网段直连零带宽
 - **手机联动**：扫码绑定后，手机端消息经服务端归因引擎路由到对应项目与 agent
+
+## 应用场景
+
+![macp-cli 应用场景](http://120.48.37.218:11000/img/macp-scene.png)
 
 ## 安装
 
@@ -117,6 +123,7 @@ src/core/
 src/plugins/           内置插件（core/tunnel/agent-*）
 src/lib/               移植自 macp 主仓库的能力库（pair/daemon/tunnel/files/report/install）
 plugins.example/       插件开发示例
+docs/images/           架构图与应用场景图（beeroute 生成，品牌风格）
 ```
 
 ## 环境变量
