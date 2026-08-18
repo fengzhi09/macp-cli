@@ -1,0 +1,21 @@
+{
+  "name": "macp-cli",
+  "version": "0.1.0",
+  "description": "macp host CLI — 多 agent 多项目管理命令行工具（tmux 式会话 + dsh 式插件生态）",
+  "type": "module",
+  "bin": {
+    "macp": "bin/macp.js"
+  },
+  "scripts": {
+    "start": "node bin/macp.js",
+    "test": "node --test \"test/*.test.js\""
+  },
+  "engines": { "node": ">=20" },
+  "files": ["bin/", "src/", "docs/", "plugins.example/"],
+  "keywords": ["macp", "agent", "cli", "mqtt", "deepseek-harness", "kimi", "multi-agent"],
+  "license": "MIT",
+  "dependencies": {
+    "mqtt": "^5.10.0",
+    "qrcode-terminal": "^0.12.0"
+  }
+}
